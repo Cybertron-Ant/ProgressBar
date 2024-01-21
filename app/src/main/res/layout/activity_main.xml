@@ -19,7 +19,8 @@
         android:layout_marginTop="@dimen/activity_vertical_margin"
         android:indeterminate="false"
         android:max="100"
-        android:progress="1"/> <!-- end ProgressBar -->
+        android:progress="1"
+        android:progressDrawable="@drawable/eccentric_progress_drawable"/> <!-- end ProgressBar -->
 
 
 </RelativeLayout>
