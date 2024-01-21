@@ -8,10 +8,12 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
     private ProgressBar progressBar; //  instanciate 'ProgressBar' widget
+    private TextView percentageTextView; // instanciate 'TextView' widget
     private int progressBarStatus = 0; // integer variable used to track the progress
 
     @Override
