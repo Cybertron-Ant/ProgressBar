@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
 
                             // update percentageTextView with 'progressBarStatus' percentage value
                             percentageTextView.setText(new StringBuilder().append(progressBarStatus).append("%").toString());
-                        }
+                        }// end nested method 'run'
                     });
 
                     try {
@@ -58,9 +58,9 @@ public class MainActivity extends AppCompatActivity {
                         Thread.sleep(150);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
-                    }
-                }
-            }
+                    }// end CATCH
+                }// end WHILE
+            }// end method 'run'
         }).start(); // end increment progress bar 'Thread'
 
     }// end method 'onCreate'
