@@ -4,6 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+// for progress bar
+import android.os.Handler;
+import android.os.Looper;
+import android.widget.ProgressBar;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
