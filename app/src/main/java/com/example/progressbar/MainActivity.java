@@ -47,18 +47,21 @@ public class MainActivity extends AppCompatActivity {
                         @Override
                         public void run() {
                             progressBar.setProgress(progressBarStatus);
+
+                            // update percentageTextView with 'progressBarStatus' percentage value
+                            percentageTextView.setText(new StringBuilder().append(progressBarStatus).append("%").toString());
                         }
                     });
 
                     try {
                         // delay to slow down progress increment
-                        Thread.sleep(50);
+                        Thread.sleep(150);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
                 }
             }
-        }).start(); // end increment progress bar
+        }).start(); // end increment progress bar 'Thread'
 
     }// end method 'onCreate'
 }// end class 'MainActivity'
