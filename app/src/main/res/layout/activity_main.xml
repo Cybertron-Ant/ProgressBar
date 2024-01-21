@@ -10,6 +10,18 @@
     tools:context=".MainActivity">
 
 
+    <TextView
+        android:id="@+id/percentagetv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/progressBar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/percentage_text_margin_bottom"
+        android:text="@string/_0"
+        android:textStyle="bold"
+        android:textSize="20sp" /> <!-- end percentage indicator -->
+
+
     <ProgressBar
         android:id="@+id/progressBar"
         style="?android:attr/progressBarStyleHorizontal"
