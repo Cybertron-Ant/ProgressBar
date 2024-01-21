@@ -18,5 +18,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-    }
-}
+
+        // find ProgressBar widget in layout by ID, assign to progressBar variable
+        progressBar = findViewById(R.id.progressBar);
+
+    }// end method 'onCreate'
+}// end class 'MainActivity'
