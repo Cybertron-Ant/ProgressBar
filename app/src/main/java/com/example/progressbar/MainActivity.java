@@ -25,5 +25,35 @@ public class MainActivity extends AppCompatActivity {
         // Handler is with the main (UI) thread, used to post actions back to the main thread
         final Handler handler = new Handler(Looper.getMainLooper());
 
+        //
+        new Thread(new Runnable() {
+            // 'Runnable' interface should be implemented by any class whose instances are intended to be executed by a thread
+            // The class must define a method of no arguments called 'run'.
+            @Override
+            public void run() {
+                // 'run' method runs in a background thread
+
+                while (progressBarStatus < 100) {
+                    // increment 'progressBarStatus'
+                    progressBarStatus += 1;
+
+                    // update progress bar on the main (UI) thread using the handler
+                    handler.post(new Runnable() {
+                        @Override
+                        public void run() {
+                            progressBar.setProgress(progressBarStatus);
+                        }
+                    });
+
+                    try {
+                        // delay to slow down progress increment
+                        Thread.sleep(50);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        }).start(); // end increment progress bar
+
     }// end method 'onCreate'
 }// end class 'MainActivity'
