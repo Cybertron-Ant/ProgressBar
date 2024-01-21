@@ -11,6 +11,9 @@ import android.widget.ProgressBar;
 
 public class MainActivity extends AppCompatActivity {
 
+    private ProgressBar progressBar; //  instanciate 'ProgressBar' widget
+    private int progressBarStatus = 0; // integer variable used to track the progress
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
